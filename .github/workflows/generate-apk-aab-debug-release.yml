@@ -56,7 +56,7 @@ jobs:
         run: ./gradlew assemble -x spotlessCheck
 
       - name: List Directory
-        run: ls
+        run: ls app/
 
       # Upload Artifact Build
       # Noted For Output [main_project_module]/build/outputs/apk/debug/
