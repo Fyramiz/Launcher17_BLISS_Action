@@ -2,7 +2,7 @@ name: Generated APK AAB (Upload - Create Artifact To Github Action)
 
 env:
   # The name of the main module repository
-  main_project_module: Launcher17_BLISS_Action
+  main_project_module: blisslauncher
 
   # The name of the Play Store
   playstore_name: Fyramiz
@@ -69,7 +69,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-          path: ./*
+          path: ${{ env.main_project_module }}/build/outputs/apk/debug/
 
       # Noted For Output [main_project_module]/build/outputs/apk/release/
       - name: Upload APK Release - ${{ env.repository_name }}
