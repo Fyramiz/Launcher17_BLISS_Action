@@ -42,10 +42,7 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
-      # Run Tests Build
-      - name: Run gradle tests
-        run: ./gradlew test
-
+      
       # Run Build Project
       - name: Build gradle project
         run: ./gradlew build -x spotlessCheck
@@ -58,7 +55,8 @@ jobs:
       - name: Build apk release project (APK) - ${{ env.main_project_module }} module
         run: ./gradlew assemble -x spotlessCheck
 
-      
+      - name: List Directory
+        run: ls
 
       # Upload Artifact Build
       # Noted For Output [main_project_module]/build/outputs/apk/debug/
