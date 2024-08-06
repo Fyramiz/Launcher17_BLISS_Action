@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-          path: ./app/build/outputs/apk/apiQ/release/*.apk
+          path: ./app/build/outputs/apk/apiS/release/*.apk
 
 
     
