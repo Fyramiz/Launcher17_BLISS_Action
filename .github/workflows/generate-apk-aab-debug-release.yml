@@ -56,7 +56,7 @@ jobs:
         run: ./gradlew assemble -x spotlessCheck
 
       - name: List Directory
-        run: ls app/build/outputs/apk/
+        run: tree app/build/outputs/apk/
 
       # Upload Artifact Build
       # Noted For Output [main_project_module]/build/outputs/apk/debug/
@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-          path: ./app/build/outputs/apk/debug/*.apk
+          path: ./app/build/outputs/apk/apiQ/*
 
 
     
